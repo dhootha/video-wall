@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'mi24-scrubber'
+    'mi24-scrubber',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider

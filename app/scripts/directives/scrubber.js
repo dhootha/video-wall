@@ -2,12 +2,20 @@
 
 angular.module('mi24-scrubber', [])
 
-  .directive('vmScrubber', function() {
+  .directive('vmScrubber', function($http) {
 
     function link(scope, element, attrs) {
-      console.log(attrs.stills);
-      var stills = eval(attrs.stills);
+
+      var stills = eval(attrs.stills); //evil, besser über controller scope an stills kommen
+      var stills2 = [];
       element.css("background-image", "url("+stills[0] + ")");
+      angular.forEach(element, function(value) {
+        $http.GET(value, function(result) {
+          value = btoa(result.body);
+        })
+      });
+
+
       var stepSize = element.context.clientWidth / stills.length;
 
       element.bind('mousemove', function(event) {
@@ -16,10 +24,6 @@ angular.module('mi24-scrubber', [])
         if(index < 0) index = 0;
         element.css("background-image", "url("+stills[index] + ")");
       });
-
-      element.bind('load', function(event) {
-        console.log("bla");
-      })
 
     }
     return {
