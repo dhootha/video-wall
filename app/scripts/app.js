@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'mi24-scrubber'
   ])
   .config(function ($routeProvider) {
     $routeProvider

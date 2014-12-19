@@ -77,3 +77,11 @@ body {
     border-bottom: 0;
   }
 }
+
+vm-scrubber {
+    display: block;
+    width: 220px;
+    height: 220px;
+    background-repeat: no-repeat;
+}
+
