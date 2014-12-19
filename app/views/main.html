@@ -2,6 +2,9 @@
 
   <div ng-repeat="video in videos" class="col-xs-3 col-md-4">
     <a ng-href="#" ng-click="open(video)" class="thumbnail">
+
+      <vm-scrubber class="scrubber" id="{{video.id}}"></vm-scrubber>
+
       <img alt="" ng-src="{{video.stillUrl}}">
     </a>
   </div>

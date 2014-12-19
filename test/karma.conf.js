@@ -26,6 +26,7 @@ module.exports = function(config) {
       'vendor/angular-route/angular-route.js',
       'vendor/angular-sanitize/angular-sanitize.js',
       'vendor/angular-touch/angular-touch.js',
+      'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
