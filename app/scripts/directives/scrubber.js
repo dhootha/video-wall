@@ -2,11 +2,12 @@
 
 angular.module('mi24-scrubber', [])
 
-  .directive('vmScrubber', function($http) {
+  .directive('vmScrubber', function() {
 
     function link(scope, element, attrs) {
 
       var stills = eval(attrs.stills); //evil, besser über controller scope an stills kommen
+      /*
       var stills2 = [];
       element.css("background-image", "url("+stills[0] + ")");
       angular.forEach(element, function(value) {
@@ -14,7 +15,7 @@ angular.module('mi24-scrubber', [])
           value = btoa(result.body);
         })
       });
-
+      */
 
       var stepSize = element.context.clientWidth / stills.length;
 
