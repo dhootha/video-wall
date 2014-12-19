@@ -19,3 +19,5 @@ Install dependencies with bower.
         
 ### Run Tests
     ./node_modules/grunt-cli/bin/grunt test
+
+[![Build Status](https://travis-ci.org/nilspreusker/video-wall.svg)](https://travis-ci.org/nilspreusker/video-wall)
